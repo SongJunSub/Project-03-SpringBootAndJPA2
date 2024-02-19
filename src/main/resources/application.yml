@@ -8,10 +8,14 @@ spring:
   jpa:
     hibernate:
       ddl-auto: create
+      #ddl-auto: none
     properties:
       hibernate:
         show_sql: true
         format_sql: true
+        ##Query에서 IN에서의 파라미터 개수
+        default_batch_fetch_size: 100
+    #open-in-view: false
 
 logging:
   level:
